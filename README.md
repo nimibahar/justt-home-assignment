@@ -8,7 +8,7 @@ Setup instructions:
 ** in their respective tables.
 
 4. Once the images were build and the project is running, visit
-   localhost:3000 in your browser to view, update and create transactions.
+   localhost:3000 in your browser to view, update, delete and create transactions.
 5. To stop the project run:
     docker-compose down
 
