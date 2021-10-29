@@ -5,7 +5,7 @@ import { TransactionType, FormType } from './types';
 
 interface ITransactionCardProps {
   transactionData?: TransactionType;
-  toggleTransactionModal: (value: React.SetStateAction<string>) => void;
+  toggleTransactionModal: (mode: FormType) => void
   setTargetTransactionUuid: (value: React.SetStateAction<string>) => void;
 }
 
