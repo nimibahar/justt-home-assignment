@@ -1,0 +1,97 @@
+$breakpoint-tablet: 768px;
+$breakpoint-big-mobile: 650px;
+$breakpoint-medium-mobile: 650px;
+$breakpoint-small-mobile: 425px;
+
+form {
+  padding: 15px 0px;
+  .section {
+    margin: 8px 0px;
+  }
+}
+
+.grid {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);  
+  }
+  @media (max-width: $breakpoint-big-mobile) {
+    grid-template-columns: 1fr;  
+    justify-items: center;
+    align-items: center;
+  }
+  @media (max-width: $breakpoint-medium-mobile) {
+    grid-template-columns: 1fr;  
+    justify-items: center;
+    align-items: center;
+  }
+  @media (max-width: $breakpoint-small-mobile) {
+    width: 100%;  
+  }
+}
+
+.card {
+  width: 100%;
+  padding: 10px;
+  background: white;
+  border: 1px solid #ededed;
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,0.09);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.cardDataRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 10px;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+.circle::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #0d6efd;
+  height: 10px;
+  margin-top: -5px;
+  top: 50%;
+  left: 5px;
+  right: 5px;
+  z-index: 9;
+}
+.circle::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #0d6efd;
+  width: 10px;
+  margin-left: -5px;
+  left: 50%;
+  top: 5px;
+  bottom: 5px;
+  z-index: 9;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
